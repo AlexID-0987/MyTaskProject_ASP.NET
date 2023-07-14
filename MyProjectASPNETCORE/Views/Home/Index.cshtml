@@ -1,0 +1,16 @@
+﻿@model IEnumerable<MyProjectASPNETCORE.Models.Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Product</h1>
+    <div>
+        <div>
+            @foreach (MyProjectASPNETCORE.Models.Product a in Model)
+            {
+                <div>@a.Name: @a.Price</div>
+            }
+        </div>
+    </div>
+</div>
