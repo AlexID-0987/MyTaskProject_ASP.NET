@@ -15,11 +15,29 @@ namespace MyProjectASPNETCORE.Controllers
 
         public IActionResult Index()
         {
-            Repo.AddProduct();
+            
+            return View();
+        }
+        [HttpGet]
+        public ViewResult MyForm()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ViewResult MyForm(SharedTask listtask)
+        {
+            
+                Repo.AddProduct(listtask);
+                return View("Thank",listtask);
+            
+            
+        }
+        public ViewResult MyListTasks()
+        {
+            
             return View(Repo.products);
         }
-
-        public IActionResult Privacy()
+        public IActionResult Privacy() 
         {
             return View();
         }

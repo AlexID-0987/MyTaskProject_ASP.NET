@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MyProjectASPNETCORE.Models.SharedTask>
+@{
+    ViewData["Title"] = "Task";
+}
+<div>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Task</th>
+                    <th>Day</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (MyProjectASPNETCORE.Models.SharedTask a in Model)
+                {
+                    <tr>
+                        <td>@a.Id</td>
+                        <td>@a.Task</td>
+                        <td>@a.DayOfWeek</td>
+                        <td>@a.Title</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

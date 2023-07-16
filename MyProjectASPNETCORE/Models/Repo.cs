@@ -2,15 +2,11 @@
 {
     public class Repo
     {
-        public static List<Product> myproducts=new List<Product>();
-        public static IEnumerable<Product> products  { get{ return myproducts; } }
-        public static void AddProduct()
+        public static List<SharedTask> myproducts=new List<SharedTask>();
+        public static IEnumerable<SharedTask> products  { get{ return myproducts; } }
+        public static void AddProduct(SharedTask shared)
         {
-            Product product1 = new Product { Name="Car",Price=678.90M};
-            Product product2 = new Product { Name = "Boat", Price = 567 };
-
-            myproducts.Add(product1);
-            myproducts.Add(product2);
+            myproducts.Add(shared);
 
         }
     }

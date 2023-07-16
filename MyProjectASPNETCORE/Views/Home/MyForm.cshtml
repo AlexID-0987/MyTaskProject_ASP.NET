@@ -1,0 +1,31 @@
+﻿@model MyProjectASPNETCORE.Models.SharedTask
+@{
+    ViewData["Title"] = "FormTask";
+}
+<div class="container">
+    <div class="panel-body">
+        <form asp-action="MyForm" method="post" class="p-a-1">
+            <div asp-validation-summary="All"></div>
+            <div class="form-group">
+                <label asp-for="Id">ID</label>
+                <input asp-for="Id" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Task">Task</label>
+                <input asp-for="Task" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DayOfWeek">DayOfweek</label>
+                <input asp-for="DayOfWeek" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Title">TitleInfo</label>
+                <input asp-for="Title" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="submit">AddTaskOnMyList</button>
+            </div>
+        </form>
+
+    </div>
+</div>
