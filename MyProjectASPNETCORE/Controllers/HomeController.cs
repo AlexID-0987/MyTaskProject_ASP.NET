@@ -37,6 +37,7 @@ namespace MyProjectASPNETCORE.Controllers
             
             return View(Repo.products);
         }
+        
         public IActionResult Privacy() 
         {
             return View();
